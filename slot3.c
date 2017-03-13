@@ -8,19 +8,19 @@
 #define LINE 5
 #define SPAN 20
 
-uint_least8_t payline[ROW][NUM]={{0x09, 0x01, 0x11, 0x01, 0x09},
-								 {0x02, 0x1A, 0x02, 0x1A, 0x02},
-								 {0x14, 0x04, 0x0C, 0x04, 0x14}};
+const uint_least8_t payline[ROW][NUM] = {{0x09, 0x01, 0x11, 0x01, 0x09},
+										 {0x02, 0x1A, 0x02, 0x1A, 0x02},
+							 			 {0x14, 0x04, 0x0C, 0x04, 0x14}};
 
-char question(char *pstr);
+static char question(char *pstr);
 
-void set_slot(uint_least8_t [][NUM]);
+static void set_slot(uint_least8_t [][NUM]);
 
-void animate_slot(uint_least8_t, uint_least8_t [][NUM]);
+static void animate_slot(uint_least8_t, uint_least8_t [][NUM]);
 
-void print_slot(uint_least8_t [][NUM]);
+static void print_slot(uint_least8_t [][NUM]);
 
-void show_winnings(uint_least8_t [][NUM]);
+static void show_winnings(uint_least8_t [][NUM]);
 
 int main(void)
 {
